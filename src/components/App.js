@@ -5,7 +5,7 @@ import {
   Route, 
   Link 
 } from "react-router-dom"; 
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 
 import Home from './Home'; 
@@ -15,7 +15,7 @@ import Login from './Login';
 import './App.css';
 
 const { SubMenu } = Menu;
-const { Header, Content, Sider } = Layout;
+const { Header, Sider } = Layout;
 
 const App = () => { 
 
@@ -67,37 +67,23 @@ const App = () => {
                   <Menu.Item key="12">option12</Menu.Item>
                 </SubMenu>
               </Menu>
-            </Sider>
+            </Sider> 
             <Layout style={{ padding: '0 24px 24px' }}>
-              <Breadcrumb style={{ margin: '16px 0' }}>
-                <Breadcrumb.Item>Home</Breadcrumb.Item>
-                <Breadcrumb.Item>List</Breadcrumb.Item>
-                <Breadcrumb.Item>App</Breadcrumb.Item>
-              </Breadcrumb>
-              <Content
-                className="site-layout-background"
-                style={{
-                  padding: 24,
-                  margin: 0,
-                  minHeight: 280,
-                }}
-              >
-                <Switch> 
-                  <Route path="/about"> 
-                    <About /> 
-                  </Route> 
-                  <Route path="/users"> 
-                    <Users /> 
-                  </Route> 
-                  <Route path="/login"> 
-                    <Login /> 
-                  </Route> 
-                  <Route path="/"> 
-                    <Home /> 
-                  </Route> 
-                </Switch> 
-              </Content>
-            </Layout>
+              <Switch> 
+                <Route path="/about"> 
+                  <About /> 
+                </Route> 
+                <Route path="/users"> 
+                  <Users /> 
+                </Route> 
+                <Route path="/login"> 
+                  <Login /> 
+                </Route> 
+                <Route path="/"> 
+                  <Home /> 
+                </Route> 
+              </Switch>  
+            </Layout>                        
           </Layout>
         </Layout>
       </div> 
